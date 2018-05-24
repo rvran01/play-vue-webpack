@@ -3,9 +3,13 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.FrontController.index()
+GET     /                               controllers.FrontController.index()
 
-GET     /api/random-quote           controllers.ApiJsonController.getRandomQuote()
+GET     /app/logout                     controllers.FrontController.logout
+
+GET     /app/tableau-de-bord            controllers.FrontController.showTableauDeBord()
+
+GET     /api/random-quote               controllers.ApiJsonController.getRandomQuote()
 POST    /api/validate-authentification  controllers.ApiJsonController.validerAuthentificate()
 
 # Map static resources from the /public folder to the /assets URL path

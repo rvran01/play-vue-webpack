@@ -1,9 +1,9 @@
 package controllers
 
 import com.google.inject.Inject
+import core.common.MLogger
 import play.Environment
 import play.api.mvc._
-
 import play.api.libs.json._
 import play.api.libs.functional.syntax._
 
@@ -11,6 +11,8 @@ case class Place(quote: String, name: String)
 case class AuthFields(login: String, password: String)
 
 class ApiJsonController @Inject()  (cc: ControllerComponents, env: Environment) extends AbstractController(cc){
+
+  val controllerLogger : MLogger= new MLogger("controller")
 
   implicit val placeWrites: Writes[Place] = (
     (JsPath \ "quote").write[String] and
@@ -43,7 +45,7 @@ class ApiJsonController @Inject()  (cc: ControllerComponents, env: Environment) 
     val authField = request.body
     println("login [%s], password [%s]".format(authField.login, authField.password))
     if (authField.login.equals("test@g.com") && authField.password.equals("azertyx1")){
-      Ok
+      Ok.withSession("USERNAME" -> authField.login) //SAVE IN SESSION USERNAME
     }else{
       Unauthorized
     }
