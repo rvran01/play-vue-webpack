@@ -5,6 +5,9 @@
 # Home page
 GET     /                           controllers.FrontController.index()
 
+GET     /api/random-quote           controllers.ApiJsonController.getRandomQuote()
+POST    /api/validate-authentification  controllers.ApiJsonController.validerAuthentificate()
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
