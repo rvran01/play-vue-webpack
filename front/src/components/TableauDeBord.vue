@@ -1,8 +1,13 @@
 <template>
 
   <div class="container" id="inTableauDeBord">
+    <barrenavigation v-bind:login="account"></barrenavigation>
       <h1>Bienvenue</h1>
       <a v-bind:href="logoutUrl">Déconnection</a>
+
+
+
+
   </div>
 
 </template>
@@ -19,6 +24,7 @@ const axios = require('axios');
 export default {
    data :function() {
     return {
+      account: 'LOGIN',
       logoutUrl: APP_URL_START + '/logout',
     }
   }
