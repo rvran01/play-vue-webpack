@@ -1,39 +1,49 @@
 <template>
-               <nav class="navbar">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-                   <div class="navbar-header">
+<a class="navbar-brand" href="#">Menu</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
 
-                     <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                      </button>
-                      <a class="navbar-brand brand-primary" href="#">PAIE {{login}}</a>
-                    </div>
-                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                       <ul class="nav navbar-nav">
-                           <li class="nav-item active">
-                               <a class="nav-link" href="">Déclaration</a>
-                           </li>
-                           <li class="nav-item">
-                               <a class="nav-link" href="">Entreprise</a>
-                           </li>
-                           <li class="nav-item">
-                               <a class="nav-link" href="">Salariés</a>
-                           </li>
-                           <li class="nav-item dropdown">
-                               <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Specificités</a>
-                               <div class="dropdown-menu dropdown-green" aria-labelledby="navbarDropdownMenuLink">
-                                   <a class="dropdown-item" href="#">Bilan</a>
-                                   <a class="dropdown-item" href="#">Statistiques</a>
-                               </div>
-                           </li>
-                       </ul>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item active">
+      <a class="nav-link" href="#">Entreprise</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Salariés</a>
+    </li>
+    <li class="nav-item-dropdown">
+      <a class="nav-link dropdown-toggle"  href="#1" id="navbarDeclaration" role="button" data-toggle="dropdown1"   >
+        Déclarations
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDeclaration">
+        <a class="dropdown-item" href="#1">Action</a>
+        <a class="dropdown-item" href="#2">Another action</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#3">Something else here</a>
+      </div>
+    </li>
 
-                   </div>
-
-               </nav>
+  </ul>
+  <form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+  <div class="dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarAccount" role="button" data-toggle="dropdown2" aria-haspopup="true" aria-expanded="false">
+      {{login}}
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarAccount">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+  </div>
+</div>
+</nav>
   </template>
 
 
